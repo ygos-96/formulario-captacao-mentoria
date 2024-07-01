@@ -1,0 +1,188 @@
+
+@font-face {
+    font-family: "Lufga";
+    src: url("../font/font-lufga.otf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Relaway";
+    src: url("../font/font-relaway.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    background-color: #121826;
+    font-family: "Relaway", sans-serif;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.main .conteudo .img-logo{
+    mix-blend-mode: lighten;
+    height: 380px;
+    width: 500px;
+}
+
+.main .conteudo .formulario-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 15px;
+    height: 100%;
+}
+
+.main .conteudo .formulario-modal .label-form {
+    font-size: 14px;
+    color: #ffff;
+}
+
+.main .conteudo .formulario-modal .grupo-formulario .input-form {
+    background-color: #121226;
+    width: 100%;
+    height: 45px;
+    border: 1px solid #5358e6;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-family: 'Raleway', sans-serif;
+    color: #ffffff;
+}
+
+.main .conteudo .formulario-modal .grupo-formulario .input-form::placeholder {
+    color: #9c9c9c;
+    font-family: "Relaway", sans-serif;
+}
+
+.main .conteudo .formulario-modal .checkbox {
+    border-radius: 50%;
+}
+
+.main .conteudo .formulario-modal .btn-form:focus {
+    border: 0;
+}
+
+.btn-form{
+    background: #121226;
+    border: 1px solid transparent;
+    border-image: linear-gradient(to right, #a6177e, #5358e6) 1;
+    padding: 10px 8px;
+    color: #fff;
+    transition: background 0.2s ease-in-out, border-image 0.3s ease-in-out;
+    margin-bottom: 15px;
+}
+
+.btn-form:hover {
+    background: #5358e6;
+    border-image: linear-gradient(to right, #5358e6, #a6177e) 1;
+
+}
+
+.checkbox-group {
+    text-align: left;
+    margin: 10px 0;
+    line-height: 30px;
+}
+
+.input-radio {
+    display: none;
+
+}
+
+.input-radio+label {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    user-select: none;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.input-radio+label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    background: #121226;
+
+}
+
+.input-radio:checked+label:after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #5358e6;
+}
+
+.main .conteudo .txt-link{
+    color: #fff;
+    margin-bottom: 25px;
+}
+
+.main .conteudo .txt-link strong{
+    font-weight: bold;
+}
+
+.main .conteudo .link{
+    text-decoration: underline;
+}
+
+.main .conteudo .link:hover{
+    color: #5358e6;
+}
+
+
+@media screen and (max-width: 1500px) {
+    .main{
+        margin-top: 0px;
+    }
+
+    .main .conteudo .img-logo{
+        mix-blend-mode: lighten;
+        height: 250px;
+        width: 300px;
+    }
+
+    .main .formulario-modal .grupo-formulario .input-form {
+        height: 30px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main .conteudo .img-logo{
+        width: 100%;
+        height: 100%;
+    }
+    .main .conteudo {
+        width: 90%;
+        max-width: 390px;
+        margin: 0 auto;   
+    }
+
+    .main .conteudo .txt-link{
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+}
+
+
